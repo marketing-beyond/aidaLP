@@ -1,0 +1,29 @@
+---
+import { Image } from 'astro:assets';
+import aidaOropeza from "../assets/Aida Oropeza.webp";
+---
+
+<section class="flex flex-col mt-20 items-stretch justify-center md:flex-row md:mt-40">
+  <div class="py-1 md:w-[67%] px-10 md:py-20">
+    <h1 class="text-[64px] font-bold text-blue my-10 leading-18">Conecto marcas <br> con su yo Global</h1>
+    <p class="text-gray">Me apasiona el marketing y la expansión internacional de marcas.</p>
+    <p class="text-gray">Busco colaborar en espacios de co-creación donde las ideas fluyen y <br> se transforman en algo significativo.</p>
+    <button class="text-white borde bg-[#6A7CD8] rounded-lg px-6 py-2 my-8">
+        <a href="#contacto" title="Contacto Aida Oropeza">Conecta Conmigo</a>
+    </button>
+   <section class="grid grid-cols-1 md:grid-cols-3 gap-2 mt-4">
+  <div class="flex flex-col items-center justify-center bg-purple-5 rounded-2xl px-5 py-3">
+    <p class="text-purple text-[12px]">🛡️ Seguridad en Entornos Digitales</p>
+  </div>
+  <div class="flex flex-col items-center justify-center bg-purple-5 rounded-2xl px-5 py-3">
+    <p class="text-purple text-[12px]">🌐 Tecnología y Negocios con Impacto</p>
+  </div>
+  <div class="flex flex-col items-center justify-center bg-purple-5 rounded-2xl px-5 py-3">
+    <p class="text-purple text-[12px]">💻 🧠 UX potenciado con IA</p>
+  </div>
+</section>
+  </div>
+  <div class="flex-1 md:w-[35%] px-5  justify-center flex items-center">
+    <Image src={aidaOropeza} alt="Aida Oropeza" class="rounded-lg " />
+  </div>
+</section>

@@ -1,0 +1,338 @@
+---
+import { Image } from "astro:assets";
+import Fintech from "../assets/casos de éxito/Caso de éxito Fintech en méxico.webp";
+import Empresalider from "../assets/casos de éxito/Caso de éxito empresa lider a nivel mundial.webp";
+import copaLogo from "../assets/copa-Airlines-logo.webp";
+import Hackaton from "../assets/casos de éxito/Hackaton-Panama-2024.webp";
+import Jazz from "../assets/casos de éxito/Jazz.webp";
+import JazzLogo from "../assets/casos de éxito/jazz-logo 1.webp";
+import MCM from "../assets/casos de éxito/MCM.webp";
+
+import { Icon } from "astro-icon/components";
+import OrienteMedio from "../assets/casos de éxito/Oriente Medio.webp";
+---
+
+<section class="flex flex-col gap-6 px-10 py-10" id="casos de éxito">
+  <p class="text-purple">Éxitos en acción</p>
+  <h6 class="text-blue text-[32px] font-bold">
+    Creamos algo <br /> con impacto global
+  </h6>
+
+  <!-- Botones -->
+  <div class="flex gap-4">
+    <button
+      id="empresarial-btn"
+      class="bg-[#F7F7F7] px-6 py-3 text-purple rounded-3xl focus:ring-2 active"
+    >
+      Sector Empresarial
+    </button>
+    <button
+      id="telcos-btn"
+      class="bg-[#F7F7F7] px-6 py-3 text-purple rounded-3xl focus:ring-2"
+    >
+      Sector de Telcos
+    </button>
+  </div>
+
+  <!-- Carrusel -->
+  <div class="w-full bg-[#F7F7F7] p-6 rounded-lg relative">
+    <!-- Contenido para Sector Empresarial -->
+    <div id="empresarial-content" class="relative overflow-hidden">
+      <div
+        id="empresarial-carousel"
+        class="flex transition-transform duration-500"
+      >
+        <!-- Card 1 -->
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-6 w-full flex-shrink-0">
+          <div class="flex flex-col  p-4">
+            <Image
+              src={copaLogo}
+              alt="Copa Airlines"
+              class="w-1/2 h-auto object-contain mb-4"
+            />
+            <ul class="text-gray text-[16px] list-disc pl-7 pt-7">
+              <li>
+                Implementación de soluciones innovadoras para empresas líderes
+                en el sector.
+              </li>
+              <li>
+                Optimización de procesos y mejora de la experiencia del cliente.
+              </li>
+              <li>Resultados medibles y sostenibles a largo plazo.</li>
+              <li>
+                Modernización de infraestructura de redes para el centro de
+                datos administrado por Juniper Mist.
+              </li>
+              <li>
+                Equipamiento para habilitar la conectividad por cable y WiFi en
+                el aeropuerto de Tocumen.
+              </li>
+              <li>
+                Implementación de red WiFi impulsada por IA para aumentar la
+                disponibilidad y eficiencia de la red a más de 500 dispositivos
+                conectados durante el Hackaton Copa 2024.
+              </li>
+            </ul>
+          </div>
+          <div class="flex justify-center items-center p-2">
+            <Image
+              src={Hackaton}
+              alt="Empresarial 1"
+              class="w-full h-auto object-contain rounded-4xl"
+            />
+          </div>
+        </div>
+        <!-- Card 2 -->
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-6 w-full flex-shrink-0">
+          <div class="flex flex-col  p-4">
+             <p class="text-blue text-[16px] font-bold">
+                Empresa líder global en la industria de manufactura a nivel
+                mundial
+              </p>
+            <ul class="text-gray text-[16px] list-disc pl-7 pt-7">
+             
+              <li>
+                Realizamos el análisis y reestructuración de procesos de
+                colaboración y comunicación tecnológica a nivel global de la
+                empresa líder en la industria de manufactura a nivel mundial.
+              </li>
+            </ul>
+          </div>
+          <div class="flex justify-center items-center p-2">
+            <Image
+              src={Empresalider}
+              alt="Empresarial 1"
+              class="w-full h-auto object-contain rounded-4xl"
+            />
+          </div>
+        </div>
+        <!-- Card 3 -->
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-6 w-full flex-shrink-0">
+          <div class="flex flex-col p-4 gap-4">
+            <p class="text-blue font-bold">Fintech líder en México</p>
+            <p class="text-gray">
+              Gracias a que se implementó la Plataforma de Operaciones de
+              Inteligencia Artificial de Juniper Networks ayudó a: Automatizar
+              la gestión de redes. Mejorar la visibilidad de la infraestructura
+              de red y aplicar una seguridad más granular. Lo que resultó en
+              mayor eficiencia operativa, resolución rápida de problemas y una
+              mejor protección contra amenazas.
+            </p>
+            <ul class="text-gray text-[16px] list-disc pl-7 pt-4">
+              <li>Automatizar la gestión de redes.</li>
+              <li>
+                Mejorar la visibilidad de la infraestructura de red y aplicar
+                una seguridad más granular.
+              </li>
+            </ul>
+            <p class="text-gray">
+              Lo que resultó en mayor eficiencia operativa, resolución rápida de
+              problemas y una mejor protección contra amenazas.
+            </p>
+          </div>
+          <div class="flex justify-center items-center p-2">
+            <Image
+              src={Fintech}
+              alt="Empresarial 1"
+              class="w-full h-auto object-contain rounded-4xl"
+            />
+          </div>
+        </div>
+      </div>
+      <Icon
+        name="left-arrow"
+        class="absolute left-0 top-1/2 transform -translate-y-1/2 text-3xl cursor-pointer"
+        id="empresarial-prev"
+      />
+      <Icon
+        name="right-arrow"
+        class="absolute right-0 top-1/2 transform -translate-y-1/2 text-3xl cursor-pointer"
+        id="empresarial-next"
+      />
+    </div>
+
+    <!-- Contenido para Sector de Telcos -->
+    <div id="telcos-content" class="relative overflow-hidden hidden">
+      <div id="telcos-carousel" class="flex transition-transform duration-500">
+        <!-- Card 1 -->
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-6 w-full flex-shrink-0">
+          <div class="flex flex-col  p-4">
+                       <p class="text-blue font-bold">Proveedor de Servicios de Primer Nivel en Oriente Medio </p>
+
+            <ul class="text-gray text-[16px] list-disc pl-7 pt-7">
+              <li>
+                Se implementó con éxito una red de 3,6 Terabits para un operador de red líder en el Medio Oriente para respaldar el aumento de la demanda global y local para la Copa Mundial de la FIFA 2022.
+              </li>
+              <li class="pt-4">
+                Se utilizó tecnología ICE6 y se entregó en un tiempo récord, creando una red de extremo a extremo en la región para apoyar la Copa Mundial de la FIFA.
+              </li>
+            
+            </ul>
+          </div>
+          <div class="flex justify-center items-center p-2">
+            <Image
+              src={OrienteMedio}
+              alt="Empresarial 1"
+              class="w-full h-auto object-contain rounded-4xl"
+            />
+          </div>
+        </div>
+        <!-- Card 2 -->
+         <div class="grid grid-cols-1 md:grid-cols-2 gap-6 w-full flex-shrink-0">
+          <div class="flex flex-col  p-4">
+                   <Image
+              src={JazzLogo}
+              alt="Empresarial 1"
+              class=" h-auto object-contain rounded-4xl"
+            /> 
+
+            <ul class="text-gray text-[16px] list-disc pl-7 pt-7">
+              <li>
+                Proveedor exclusivo de soluciones de red impulsadas con IA.
+              </li>
+              
+            
+            </ul>
+          </div>
+          <div class="flex justify-center items-center p-2">
+            <Image
+              src={Jazz}
+              alt="Empresarial 1"
+              class="w-full h-auto object-contain rounded-4xl"
+            />
+          </div>
+        </div>
+                <!-- Card 3 -->
+
+          <div class="grid grid-cols-1 md:grid-cols-2 gap-6 w-full flex-shrink-0">
+          <div class="flex flex-col  p-4">
+           <Icon
+        name="mcm logo"
+            class="text-5xl"
+      />
+            <p class="text-gray pt-4">La protección DDoS en tiempo real distingue a MCM Telecom en un mercado competitivo.</p>
+            <ul class="text-gray text-[16px] list-disc pl-7 pt-4">
+              <li class="py-4">
+                98% de ataques DDoS bloqueados automáticamente
+            </li>
+              <li>
+                85% de los ataques DDoS duran meno de 10 minutos
+              </li>
+            <li class="py-4">27% de aumento de ventas esperado en el primer año</li>
+            </ul>
+          </div>
+          <div class="flex justify-center items-center p-2">
+            <Image
+              src={MCM}
+              alt="Empresarial 1"
+              class="w-full h-auto object-contain rounded-4xl"
+            />
+          </div>
+        </div>
+      </div>
+      <Icon
+        name="left-arrow"
+        class="absolute left-0 top-1/2 transform -translate-y-1/2 text-3xl cursor-pointer"
+        id="telcos-prev"
+      />
+      <Icon
+        name="right-arrow"
+        class="absolute right-0 top-1/2 transform -translate-y-1/2 text-3xl cursor-pointer"
+        id="telcos-next"
+      />
+    </div>
+  </div>
+</section>
+
+<script>
+  const telcosBtn = document.getElementById("telcos-btn");
+  const empresarialBtn = document.getElementById("empresarial-btn");
+  const telcosContent = document.getElementById("telcos-content");
+  const empresarialContent = document.getElementById("empresarial-content");
+
+  const telcosCarousel = document.getElementById("telcos-carousel");
+  const empresarialCarousel = document.getElementById("empresarial-carousel");
+  const telcosPrev = document.getElementById("telcos-prev");
+  const telcosNext = document.getElementById("telcos-next");
+  const empresarialPrev = document.getElementById("empresarial-prev");
+  const empresarialNext = document.getElementById("empresarial-next");
+
+  let telcosIndex = 0;
+  let empresarialIndex = 0;
+
+  function showContent(
+    activeContent,
+    inactiveContent,
+    activeButton,
+    inactiveButton
+  ) {
+    activeContent.classList.remove("hidden");
+    inactiveContent.classList.add("hidden");
+    activeButton.classList.add("active");
+    inactiveButton.classList.remove("active");
+  }
+
+  function updateCarousel(carousel, index) {
+    const width = carousel.offsetWidth;
+    carousel.style.transform = `translateX(-${index * width}px)`;
+  }
+
+  function handlePrevClick(carousel, index, setIndex) {
+    const totalSlides = carousel.children.length;
+    setIndex(index > 0 ? index - 1 : totalSlides - 1);
+    updateCarousel(carousel, index);
+  }
+
+  function handleNextClick(carousel, index, setIndex) {
+    const totalSlides = carousel.children.length;
+    setIndex(index < totalSlides - 1 ? index + 1 : 0);
+    updateCarousel(carousel, index);
+  }
+
+  telcosPrev.addEventListener("click", () => {
+    handlePrevClick(
+      telcosCarousel,
+      telcosIndex,
+      (newIndex) => (telcosIndex = newIndex)
+    );
+  });
+
+  telcosNext.addEventListener("click", () => {
+    handleNextClick(
+      telcosCarousel,
+      telcosIndex,
+      (newIndex) => (telcosIndex = newIndex)
+    );
+  });
+
+  empresarialPrev.addEventListener("click", () => {
+    handlePrevClick(
+      empresarialCarousel,
+      empresarialIndex,
+      (newIndex) => (empresarialIndex = newIndex)
+    );
+  });
+
+  empresarialNext.addEventListener("click", () => {
+    handleNextClick(
+      empresarialCarousel,
+      empresarialIndex,
+      (newIndex) => (empresarialIndex = newIndex)
+    );
+  });
+
+  telcosBtn.addEventListener("click", () => {
+    showContent(telcosContent, empresarialContent, telcosBtn, empresarialBtn);
+  });
+
+  empresarialBtn.addEventListener("click", () => {
+    showContent(empresarialContent, telcosContent, empresarialBtn, telcosBtn);
+  });
+</script>
+
+<style>
+  .active {
+    background-color: #6a7cd8;
+    color: white;
+  }
+</style>

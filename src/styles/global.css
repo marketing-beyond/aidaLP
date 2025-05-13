@@ -1,0 +1,28 @@
+@import "tailwindcss";
+
+body{
+    background-color: #fff;
+    font-family: 'Lato';
+}
+.text-blue{
+    color: #082D53;
+}
+.text-gray{
+    color: #6A7180;
+    line-height: 24px;
+}
+.text-purple{
+    color: #6A7CD8;
+}
+
+.icon-hover{
+    color: #C1C5D0;
+    transition: all 0.3s ease-in-out;
+}
+.icon-hover:hover{
+    color: #6A7CD8;
+    transform: scale(1.2);
+}
+.bg-purple-5 {
+  background-color: #6a7cd819
+}
