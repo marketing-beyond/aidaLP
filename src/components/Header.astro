@@ -7,14 +7,14 @@ import { Icon } from "astro-icon/components";
     <div class="flex justify-between items-center h-16">
       <!-- Logo a la izquierda -->
       <div class="flex-shrink-0">
-        <a href="/" title="Aida Oropeza">
+        <a href="/" title="Aida Oropeza" aria-label="Aida Oropeza logo">
           <Icon name="Logo_Aida" class="text-5xl" />
         </a>
       </div>
 
       <div class="hidden md:flex items-center space-x-4 gap-8">
         <a href="#proposito" title="Mi proposito">Mi próposito</a>
-        <a href="#" title="Mi proposito">Mi Equipo Global</a>
+        <a href="#miequipo" title="Mi proposito">Mi Equipo Global</a>
         <a href="#casos de éxito" title="Mi proposito">Éxitos en acción</a>
 
          <a href="#contacto" class="text-white borde bg-[#6A7CD8] rounded-lg p-3">Agenda con Aida
@@ -41,16 +41,15 @@ import { Icon } from "astro-icon/components";
       </div>
     </div>
     <!-- Mobile menu -->
-    <div id="mobile-menu" class="md:hidden hidden flex-col space-y-2 mt-2">
-       <a href="#proposito" title="Mi proposito">Mi próposito</a>
-        <a href="#proposito" title="Mi proposito">Mi Equipo Global</a>
-        <a href="#proposito" title="Mi proposito">Éxitos en acción</a>
-        <a href="#contacto" >
-           <a href="#contacto" class="text-white borde bg-[#6A7CD8] rounded-lg p-3">Agenda con Aida
-  
-           </a>
-     
-    </div>
+
+<!-- Mobile menu -->
+<div id="mobile-menu" class="md:hidden flex flex-col items-stretch gap-4 mt-5">
+  <a href="#proposito" title="Mi proposito">Mi próposito</a>
+  <a href="#miequipo" title="Mi Equipo Global">Mi Equipo Global</a>
+  <a href="#casos-de-exito" title="Éxitos en acción">Éxitos en acción</a>
+  <a href="#contacto" class="text-white bg-[#6A7CD8] rounded-lg p-3 text-center">Agenda con Aida</a>
+</div>
+
   </div>
 </header>
 
