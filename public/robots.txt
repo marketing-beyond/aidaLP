@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://aidaoropeza.beyondtechnology.net/sitemap-index.xml
