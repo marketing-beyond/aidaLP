@@ -46,10 +46,11 @@ const cards = [
     <div class="relative overflow-hidden">
       <!-- Track: muestra 2 cards siempre -->
       <div data-carousel class="carousel-root">
-        <div class="carousel-track flex gap-5 justify-start items-stretch transition-transform duration-500 overflow-x-auto snap-x snap-mandatory md:overflow-x-visible md:snap-none">
+        <!-- <-- ADDED items-stretch para que TODOS los hijos compartan la misma altura --> 
+       <div class="carousel-track flex gap-5 justify-start items-stretch transition-transform duration-500">
+
           {cards.map((card) => (
-            <!-- article ahora es flex para permitir que su contenido rellene la altura -->
-            <article class="flex-shrink-0 w-1/2 flex">
+            <article class="flex-shrink-0 w-full md:w-1/2 flex">
               <div class="flex flex-col bg-[#F7F7F7] rounded-2xl overflow-hidden h-full">
                 <div class="w-[95%] overflow-hidden rounded-t-2xl h-56 md:h-40">
                   <Image
