@@ -1,40 +1,49 @@
 ---
 import { Image } from "astro:assets";
-import TechEspresso from "../assets/press/Tech-espresso.webp";
-import JefeFacilitador from "../assets/press/Del jefe al facilitador, Aida Oropeza.webp"
-import InteligenciaEmocional from "../assets/press/El poder de la intelgencia emocional artificial.webp"
+import TechEspresso2 from "../assets/press/Tech-espresso.webp";
+import JefeFacilitador from "../assets/press/Del jefe al facilitador, Aida Oropeza.webp";
+import InteligenciaEmocional from "../assets/press/El poder de la intelgencia emocional artificial.webp";
+import TechEspresso1 from "../assets/press/Detrás de un gran proyecto tecnológico global.webp";
 import { Icon } from "astro-icon/components";
 
 const cards = [
   {
     id: 1,
+    title: "TechEspresso - Detrás de un gran proyecto tecnológico global ",
+    excerpt:
+      "En este nuevo episodio de Tech Expreso, conversamos con Gilberto Añino Díaz, Infrastructure Technology Manager en Copa Airlines, para explorar cómo está evolucionando la conectividad empresarial en la industria aérea. Desde garantizar la disponibilidad de la red global 24/7 hasta la gestión de centros de datos complejos, el fortalecimiento de equipos de alto desempeño y la colaboración con socios tecnológicos estratégicos.",
+    href: "https://www.youtube.com/watch?v=g-Q-RDuqdO0",
+    image: TechEspresso1,
+    alt: "TechEspresso - Ciberseguridad",
+  },{
+    id: 2,
+    title: "El poder de la inteligencia artificial emocional",
+    excerpt:
+      "Te comparto esta nota editorial que realicé en colaboración con Marcelino de Miguel Barreto, donde exploramos el poder de la inteligencia artificial emocional y cómo esta tecnología puede transformar la relación entre marcas y clientes, creando experiencias más humanas, cercanas y memorables.",
+    href: "https://expansion.mx/opinion/2025/07/11/del-jefe-al-facilitador-el-liderazgo-que-la-gen-z-necesita",
+    image: InteligenciaEmocional,
+    alt: "El poder de la inteligencia artificial emocional",
+  },
+  {
+    id: 3,
     title:
       "TechEspresso - Ciberseguridad Empresarial: La protección que tu empresa no puede ignorar",
     excerpt:
       "Un ciberataque puede detener por completo a una empresa de la noche a la mañana. 🚨. En este episodio converso con Alinee Domínguez, experta en ciberseguridad en Beyond Technology.",
     href: "https://www.youtube.com/watch?v=-1BPQ0M2u94",
-    image: TechEspresso,
-    alt: "TechEspresso - Ciberseguridad"
+    image: TechEspresso2,
+    alt: "TechEspresso - Ciberseguridad",
   },
   {
-    id: 2,
-    title:
-      "Del jefe al facilitador, el liderazgo que la Gen Z necesita",
+    id: 4,
+    title: "Del jefe al facilitador, el liderazgo que la Gen Z necesita",
     excerpt:
       "La Gen Z llegó al trabajo con valores distintos: buscan propósito, autonomía y coherencia. ¿Cómo debe evolucionar el liderazgo? Yo propongo pasar de 'jefe' a facilitador. Lee esta visión que transforma el management.",
     href: "https://expansion.mx/opinion/2025/07/11/del-jefe-al-facilitador-el-liderazgo-que-la-gen-z-necesita",
     image: JefeFacilitador,
-    alt: "Artículo - Del jefe al facilitador"
-  },{
-    id: 3,
-    title:
-    "El poder de la inteligencia artificial emocional",
-    excerpt:
-    "Te comparto esta nota editorial que realicé en colaboración con Marcelino de Miguel Barreto, donde exploramos el poder de la inteligencia artificial emocional y cómo esta tecnología puede transformar la relación entre marcas y clientes, creando experiencias más humanas, cercanas y memorables.",
-    href: "https://expansion.mx/opinion/2025/07/11/del-jefe-al-facilitador-el-liderazgo-que-la-gen-z-necesita",
-    image: InteligenciaEmocional,
-    alt: "El poder de la inteligencia artificial emocional"
-  }
+    alt: "Artículo - Del jefe al facilitador",
+  },
+  
 ];
 ---
 
@@ -46,38 +55,43 @@ const cards = [
     <div class="relative overflow-hidden">
       <!-- Track: muestra 2 cards siempre -->
       <div data-carousel class="carousel-root">
-        <!-- <-- ADDED items-stretch para que TODOS los hijos compartan la misma altura --> 
-       <div class="carousel-track flex gap-5 justify-start items-stretch transition-transform duration-500">
-
-          {cards.map((card) => (
-            <article class="flex-shrink-0 w-full md:w-1/2 flex">
-              <div class="flex flex-col bg-[#F7F7F7] rounded-2xl overflow-hidden h-full">
-                <div class="w-[95%] overflow-hidden rounded-t-2xl h-56 md:h-40">
-                  <Image
-                    src={card.image}
-                    alt={card.alt}
-                    class="w-full h-full object-cover"
-                  />
-                </div>
-
-                <div class="px-5 pb-5 flex flex-col justify-between flex-1">
-                  <div class="flex flex-col gap-3">
-                    <p class="text-blue mt-3 font-bold text-[20px]">{card.title}</p>
-                    <p class="text-gray text-[16px]">{card.excerpt}</p>
+        <!-- <-- ADDED items-stretch para que TODOS los hijos compartan la misma altura -->
+        <div
+          class="carousel-track flex gap-5 justify-start items-stretch transition-transform duration-500"
+        >
+          {
+            cards.map((card) => (
+              <article class="flex-shrink-0 w-full md:w-1/2 flex">
+                <div class="flex flex-col bg-[#F7F7F7] rounded-2xl overflow-hidden h-full">
+                  <div class="w-[95%] overflow-hidden rounded-t-2xl h-56 md:h-40">
+                    <Image
+                      src={card.image}
+                      alt={card.alt}
+                      class="w-full h-full object-cover"
+                    />
                   </div>
 
-                  <a
-                    href={card.href}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    class="mt-3 inline-block bg-[#6A7CD8] text-white text-center py-2 px-4 rounded-lg"
-                  >
-                    Ver más
-                  </a>
+                  <div class="px-5 pb-5 flex flex-col justify-between flex-1">
+                    <div class="flex flex-col gap-3">
+                      <p class="text-blue mt-3 font-bold text-[20px]">
+                        {card.title}
+                      </p>
+                      <p class="text-gray text-[16px]">{card.excerpt}</p>
+                    </div>
+
+                    <a
+                      href={card.href}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      class="mt-3 inline-block bg-[#6A7CD8] text-white text-center py-2 px-4 rounded-lg"
+                    >
+                      Ver más
+                    </a>
+                  </div>
                 </div>
-              </div>
-            </article>
-          ))}
+              </article>
+            ))
+          }
         </div>
 
         <!-- Controles (accesibles) -->
@@ -94,7 +108,7 @@ const cards = [
           class="absolute right-0 top-1/2 -translate-y-1/2 text-3xl p-2 md:p-3"
           data-carousel-next
         >
-          <Icon name="right-arrow" class="text-3xl" /> 
+          <Icon name="right-arrow" class="text-3xl" />
         </button>
       </div>
     </div>

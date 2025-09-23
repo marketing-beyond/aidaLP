@@ -2,23 +2,20 @@
 import { Icon } from 'astro-icon/components'
 import { Image } from 'astro:assets';
 import InfineraLogo from "../assets/Infinera.webp";
-import BroadComLogo from "../assets/Broadcom_Logo.webp";
 import DatacultrLogo from "../assets/Datacultr-Logo.webp";
 ---
 
 <section class="flex flex-col items-center justify-center gap-2 px-10 py-10">
     <p class="text-purple">Mi Equipo Global en Beyond Technology </p>
     <h6 class="text-blue text-[32px] text-center font-bold">Aliados Globales</h6>
-    <div class="grid grid-cols-2 md:grid-cols-5 md:gap-20 mt-20 items-center justify-center sm: gap-15">
+    <div class="grid grid-cols-2 md:grid-cols-4 md:gap-20 mt-20 sm: gap-15">
         <div class="flex items-center justify-center">
             <Icon name="Partners/Logo-Juniper-RGB 1" class="text-3xl" />
         </div>
         <div class="flex items-center justify-center">
             <Image src={InfineraLogo} alt="Infinera Logo" class="w-32" />
         </div>
-        <div class="flex items-center justify-center">
-            <Image src={BroadComLogo} alt="Broadcom logo" class="w-32" />
-        </div>
+
         <div class="flex items-center justify-center">
             <Icon name="Partners/Google_logo" class="text-3xl" />
         </div>

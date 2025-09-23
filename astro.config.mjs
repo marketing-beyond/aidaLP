@@ -7,7 +7,7 @@ import sitemap from '@astrojs/sitemap';
 
 // https://astro.build/config
 export default defineConfig({
-  site: 'https://github.com/marketing-beyond/',
+  site: 'https://aidaoropeza.beyondtechnology.net/',
   vite: {
     plugins: [tailwindcss()]
   },
